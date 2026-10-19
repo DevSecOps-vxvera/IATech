@@ -1,0 +1,1538 @@
+{
+  "data": [
+    {
+      "traceID": "10000000000000000000000000000001",
+      "spans": [
+        {
+          "traceID": "10000000000000000000000000000001",
+          "spanID": "1000000000000001",
+          "flags": 1,
+          "operationName": "POST /checkout",
+          "references": [],
+          "startTime": 1792422000000000,
+          "duration": 420000,
+          "tags": [
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "server"
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "key": "lab.scenario",
+              "type": "string",
+              "value": "01 - Checkout normal"
+            },
+            {
+              "key": "lab.expected_duration_ms",
+              "type": "float64",
+              "value": 420.0
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "10000000000000000000000000000001",
+          "spanID": "1000000000000011",
+          "flags": 1,
+          "operationName": "validate-cart",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "10000000000000000000000000000001",
+              "spanID": "1000000000000001"
+            }
+          ],
+          "startTime": 1792422000030000,
+          "duration": 70000,
+          "tags": [
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "client"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "10000000000000000000000000000001",
+          "spanID": "1000000000000012",
+          "flags": 1,
+          "operationName": "SELECT inventory",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "10000000000000000000000000000001",
+              "spanID": "1000000000000001"
+            }
+          ],
+          "startTime": 1792422000120000,
+          "duration": 85000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "postgresql"
+            },
+            {
+              "key": "db.operation",
+              "type": "string",
+              "value": "SELECT"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "10000000000000000000000000000001",
+          "spanID": "1000000000000013",
+          "flags": 1,
+          "operationName": "POST /payments/authorize",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "10000000000000000000000000000001",
+              "spanID": "1000000000000001"
+            }
+          ],
+          "startTime": 1792422000230000,
+          "duration": 130000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "processID": "p4",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "api-gateway",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "web-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "checkout-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "app-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p3": {
+          "serviceName": "inventory-db",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "db-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "15"
+            }
+          ]
+        },
+        "p4": {
+          "serviceName": "payment-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "pay-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "20000000000000000000000000000002",
+      "spans": [
+        {
+          "traceID": "20000000000000000000000000000002",
+          "spanID": "2000000000000001",
+          "flags": 1,
+          "operationName": "GET /products/search",
+          "references": [],
+          "startTime": 1792422010000000,
+          "duration": 2450000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "key": "performance.degraded",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "lab.scenario",
+              "type": "string",
+              "value": "02 - Base de datos lenta"
+            },
+            {
+              "key": "lab.expected_duration_ms",
+              "type": "float64",
+              "value": 2450.0
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "20000000000000000000000000000002",
+          "spanID": "2000000000000011",
+          "flags": 1,
+          "operationName": "search-products",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "20000000000000000000000000000002",
+              "spanID": "2000000000000001"
+            }
+          ],
+          "startTime": 1792422010040000,
+          "duration": 2320000,
+          "tags": [
+            {
+              "key": "component",
+              "type": "string",
+              "value": "application"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "20000000000000000000000000000002",
+          "spanID": "2000000000000012",
+          "flags": 1,
+          "operationName": "SELECT products JOIN stock",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "20000000000000000000000000000002",
+              "spanID": "2000000000000011"
+            }
+          ],
+          "startTime": 1792422010090000,
+          "duration": 2200000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "postgresql"
+            },
+            {
+              "key": "db.rows_affected",
+              "type": "int64",
+              "value": 18452
+            },
+            {
+              "key": "db.index_used",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792422012100000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "slow_query"
+                },
+                {
+                  "key": "duration_ms",
+                  "type": "int64",
+                  "value": 2200
+                },
+                {
+                  "key": "threshold_ms",
+                  "type": "int64",
+                  "value": 500
+                }
+              ]
+            }
+          ],
+          "processID": "p3",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "api-gateway",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "web-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "catalog-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "app-02"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p3": {
+          "serviceName": "catalog-db",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "db-02"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "15"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "30000000000000000000000000000003",
+      "spans": [
+        {
+          "traceID": "30000000000000000000000000000003",
+          "spanID": "3000000000000001",
+          "flags": 1,
+          "operationName": "POST /checkout",
+          "references": [],
+          "startTime": 1792422020000000,
+          "duration": 510000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 500
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "lab.scenario",
+              "type": "string",
+              "value": "03 - Excepción de aplicación"
+            },
+            {
+              "key": "lab.expected_duration_ms",
+              "type": "float64",
+              "value": 510.0
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "30000000000000000000000000000003",
+          "spanID": "3000000000000011",
+          "flags": 1,
+          "operationName": "charge-card",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "30000000000000000000000000000003",
+              "spanID": "3000000000000001"
+            }
+          ],
+          "startTime": 1792422020070000,
+          "duration": 330000,
+          "tags": [
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "otel.status_code",
+              "type": "string",
+              "value": "ERROR"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792422020360000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "exception"
+                },
+                {
+                  "key": "exception.type",
+                  "type": "string",
+                  "value": "NullReferenceException"
+                },
+                {
+                  "key": "exception.message",
+                  "type": "string",
+                  "value": "Payment token is null"
+                },
+                {
+                  "key": "exception.stacktrace",
+                  "type": "string",
+                  "value": "PaymentService.Charge -> TokenValidator.Validate"
+                }
+              ]
+            }
+          ],
+          "processID": "p2",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "api-gateway",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "web-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "payment-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "pay-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "2.4.1"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "40000000000000000000000000000004",
+      "spans": [
+        {
+          "traceID": "40000000000000000000000000000004",
+          "spanID": "4000000000000001",
+          "flags": 1,
+          "operationName": "GET /shipping/quote",
+          "references": [],
+          "startTime": 1792422030000000,
+          "duration": 1610000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "key": "fallback.used",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "lab.scenario",
+              "type": "string",
+              "value": "04 - Timeout y fallback"
+            },
+            {
+              "key": "lab.expected_duration_ms",
+              "type": "float64",
+              "value": 1610.0
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "40000000000000000000000000000004",
+          "spanID": "4000000000000011",
+          "flags": 1,
+          "operationName": "carrier-api request",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "40000000000000000000000000000004",
+              "spanID": "4000000000000001"
+            }
+          ],
+          "startTime": 1792422030060000,
+          "duration": 1350000,
+          "tags": [
+            {
+              "key": "peer.service",
+              "type": "string",
+              "value": "carrier-api"
+            },
+            {
+              "key": "timeout.ms",
+              "type": "int64",
+              "value": 1200
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "otel.status_code",
+              "type": "string",
+              "value": "ERROR"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792422031410000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "timeout"
+                },
+                {
+                  "key": "elapsed_ms",
+                  "type": "int64",
+                  "value": 1350
+                }
+              ]
+            }
+          ],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "40000000000000000000000000000004",
+          "spanID": "4000000000000012",
+          "flags": 1,
+          "operationName": "cached-rate fallback",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "40000000000000000000000000000004",
+              "spanID": "4000000000000001"
+            }
+          ],
+          "startTime": 1792422031430000,
+          "duration": 90000,
+          "tags": [
+            {
+              "key": "cache.hit",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "api-gateway",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "web-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "shipping-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "app-03"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p3": {
+          "serviceName": "redis-cache",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "cache-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "50000000000000000000000000000005",
+      "spans": [
+        {
+          "traceID": "50000000000000000000000000000005",
+          "spanID": "5000000000000001",
+          "flags": 1,
+          "operationName": "POST /notifications",
+          "references": [],
+          "startTime": 1792422040000000,
+          "duration": 1120000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 202
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "key": "retry.count",
+              "type": "int64",
+              "value": 2
+            },
+            {
+              "key": "lab.scenario",
+              "type": "string",
+              "value": "05 - Reintentos y recuperación"
+            },
+            {
+              "key": "lab.expected_duration_ms",
+              "type": "float64",
+              "value": 1120.0
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "50000000000000000000000000000005",
+          "spanID": "5000000000000011",
+          "flags": 1,
+          "operationName": "send attempt 1",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "50000000000000000000000000000005",
+              "spanID": "5000000000000001"
+            }
+          ],
+          "startTime": 1792422040050000,
+          "duration": 240000,
+          "tags": [
+            {
+              "key": "retry.attempt",
+              "type": "int64",
+              "value": 1
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 503
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "50000000000000000000000000000005",
+          "spanID": "5000000000000012",
+          "flags": 1,
+          "operationName": "send attempt 2",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "50000000000000000000000000000005",
+              "spanID": "5000000000000001"
+            }
+          ],
+          "startTime": 1792422040390000,
+          "duration": 260000,
+          "tags": [
+            {
+              "key": "retry.attempt",
+              "type": "int64",
+              "value": 2
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 503
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "50000000000000000000000000000005",
+          "spanID": "5000000000000013",
+          "flags": 1,
+          "operationName": "send attempt 3",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "50000000000000000000000000000005",
+              "spanID": "5000000000000001"
+            }
+          ],
+          "startTime": 1792422040760000,
+          "duration": 210000,
+          "tags": [
+            {
+              "key": "retry.attempt",
+              "type": "int64",
+              "value": 3
+            },
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 202
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "order-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "app-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "notification-provider",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "notify-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "60000000000000000000000000000006",
+      "spans": [
+        {
+          "traceID": "60000000000000000000000000000006",
+          "spanID": "6000000000000001",
+          "flags": 1,
+          "operationName": "GET /dashboard",
+          "references": [],
+          "startTime": 1792422050000000,
+          "duration": 880000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "key": "lab.scenario",
+              "type": "string",
+              "value": "06 - Llamadas paralelas"
+            },
+            {
+              "key": "lab.expected_duration_ms",
+              "type": "float64",
+              "value": 880.0
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "60000000000000000000000000000006",
+          "spanID": "6000000000000011",
+          "flags": 1,
+          "operationName": "GET /customer",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "60000000000000000000000000000006",
+              "spanID": "6000000000000001"
+            }
+          ],
+          "startTime": 1792422050060000,
+          "duration": 450000,
+          "tags": [
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "60000000000000000000000000000006",
+          "spanID": "6000000000000012",
+          "flags": 1,
+          "operationName": "GET /orders",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "60000000000000000000000000000006",
+              "spanID": "6000000000000001"
+            }
+          ],
+          "startTime": 1792422050065000,
+          "duration": 720000,
+          "tags": [
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "key": "critical.path",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "60000000000000000000000000000006",
+          "spanID": "6000000000000013",
+          "flags": 1,
+          "operationName": "GET /recommendations",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "60000000000000000000000000000006",
+              "spanID": "6000000000000001"
+            }
+          ],
+          "startTime": 1792422050070000,
+          "duration": 310000,
+          "tags": [
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "processID": "p4",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "web-frontend",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "web-02"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "customer-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "app-04"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p3": {
+          "serviceName": "order-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "app-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p4": {
+          "serviceName": "recommendation-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "app-05"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "70000000000000000000000000000007",
+      "spans": [
+        {
+          "traceID": "70000000000000000000000000000007",
+          "spanID": "7000000000000001",
+          "flags": 1,
+          "operationName": "host contention incident",
+          "references": [],
+          "startTime": 1792422060000000,
+          "duration": 3400000,
+          "tags": [
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 94.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 88.0
+            },
+            {
+              "key": "network.interface.utilization_pct",
+              "type": "float64",
+              "value": 97.0
+            },
+            {
+              "key": "network.receive_mbps",
+              "type": "float64",
+              "value": 940.0
+            },
+            {
+              "key": "lab.scenario",
+              "type": "string",
+              "value": "07 - Descarga masiva y contención de recursos"
+            },
+            {
+              "key": "lab.expected_duration_ms",
+              "type": "float64",
+              "value": 3400.0
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "70000000000000000000000000000007",
+          "spanID": "7000000000000011",
+          "flags": 1,
+          "operationName": "GET /downloads/backup-5GB.zip",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "70000000000000000000000000000007",
+              "spanID": "7000000000000001"
+            }
+          ],
+          "startTime": 1792422060050000,
+          "duration": 2900000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "file.name",
+              "type": "string",
+              "value": "backup-5GB.zip"
+            },
+            {
+              "key": "file.size_bytes",
+              "type": "int64",
+              "value": 5368709120
+            },
+            {
+              "key": "network.protocol.name",
+              "type": "string",
+              "value": "http"
+            },
+            {
+              "key": "network.throughput_mbps",
+              "type": "float64",
+              "value": 910.0
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "70000000000000000000000000000007",
+          "spanID": "7000000000000012",
+          "flags": 1,
+          "operationName": "GET /api/orders",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "70000000000000000000000000000007",
+              "spanID": "7000000000000001"
+            }
+          ],
+          "startTime": 1792422060300000,
+          "duration": 2650000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 504
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "queue.time_ms",
+              "type": "int64",
+              "value": 1810
+            },
+            {
+              "key": "host.shared_with_download",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792422062950000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "gateway_timeout"
+                },
+                {
+                  "key": "timeout_ms",
+                  "type": "int64",
+                  "value": 2500
+                }
+              ]
+            }
+          ],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "70000000000000000000000000000007",
+          "spanID": "7000000000000013",
+          "flags": 1,
+          "operationName": "thread-pool wait",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "70000000000000000000000000000007",
+              "spanID": "7000000000000012"
+            }
+          ],
+          "startTime": 1792422060330000,
+          "duration": 1810000,
+          "tags": [
+            {
+              "key": "threadpool.queue_length",
+              "type": "int64",
+              "value": 146
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            }
+          ],
+          "logs": [],
+          "processID": "p3",
+          "warnings": null
+        },
+        {
+          "traceID": "70000000000000000000000000000007",
+          "spanID": "7000000000000014",
+          "flags": 1,
+          "operationName": "GET /api/inventory",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "70000000000000000000000000000007",
+              "spanID": "7000000000000001"
+            }
+          ],
+          "startTime": 1792422060650000,
+          "duration": 2100000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 503
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "queue.time_ms",
+              "type": "int64",
+              "value": 1240
+            },
+            {
+              "key": "host.shared_with_download",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792422062700000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "service_unavailable"
+                },
+                {
+                  "key": "reason",
+                  "type": "string",
+                  "value": "resource_saturation"
+                }
+              ]
+            }
+          ],
+          "processID": "p4",
+          "warnings": null
+        },
+        {
+          "traceID": "70000000000000000000000000000007",
+          "spanID": "7000000000000015",
+          "flags": 1,
+          "operationName": "GET /api/customer",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "70000000000000000000000000000007",
+              "spanID": "7000000000000001"
+            }
+          ],
+          "startTime": 1792422060900000,
+          "duration": 1780000,
+          "tags": [
+            {
+              "key": "http.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "key": "performance.degraded",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "baseline.duration_ms",
+              "type": "int64",
+              "value": 180
+            },
+            {
+              "key": "host.shared_with_download",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p5",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "host-observer",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ec2-win-web-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "iis-download-service",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ec2-win-web-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "10"
+            }
+          ]
+        },
+        "p3": {
+          "serviceName": "orders-api",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ec2-win-web-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p4": {
+          "serviceName": "inventory-api",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ec2-win-web-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        },
+        "p5": {
+          "serviceName": "customer-api",
+          "tags": [
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "ec2-win-web-01"
+            },
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "lab"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    }
+  ]
+}

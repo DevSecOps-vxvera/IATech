@@ -1,0 +1,6366 @@
+{
+  "data": [
+    {
+      "traceID": "a10b5000000000000000000000000001",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000001",
+          "spanID": "beef000000000001",
+          "operationName": "GET /api/auth/validate",
+          "references": [],
+          "startTime": 1792076415000000,
+          "duration": 92000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/auth/validate"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 24.5
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 12.4
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 12.1
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 12
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 29.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 60.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 1800
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000001",
+          "spanID": "beef000000000002",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000001",
+              "spanID": "beef000000000001"
+            }
+          ],
+          "startTime": 1792076415006000,
+          "duration": 73999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "auth-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000001",
+          "spanID": "beef000000000003",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000001",
+              "spanID": "beef000000000002"
+            }
+          ],
+          "startTime": 1792076415017999,
+          "duration": 18000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000001",
+          "spanID": "beef000000000004",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000001",
+              "spanID": "beef000000000002"
+            }
+          ],
+          "startTime": 1792076415072000,
+          "duration": 20000,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 12
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 24.5
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 1800
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "auth-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b5000000000000000000000000002",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000002",
+          "spanID": "beef000000000005",
+          "operationName": "GET /api/orders/74219",
+          "references": [],
+          "startTime": 1792076435000000,
+          "duration": 188000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/orders/74219"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 27.2
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 14.2
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 13.0
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 18
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 61.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 14800
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000002",
+          "spanID": "beef000000000006",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000002",
+              "spanID": "beef000000000005"
+            }
+          ],
+          "startTime": 1792076435006000,
+          "duration": 169999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "orders-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000002",
+          "spanID": "beef000000000007",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000002",
+              "spanID": "beef000000000006"
+            }
+          ],
+          "startTime": 1792076435017999,
+          "duration": 46000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000002",
+          "spanID": "beef000000000008",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000002",
+              "spanID": "beef000000000006"
+            }
+          ],
+          "startTime": 1792076435168000,
+          "duration": 20000,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 18
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 27.2
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 14800
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "orders-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b5000000000000000000000000003",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000003",
+          "spanID": "beef000000000009",
+          "operationName": "GET /api/inventory/SKU-0091",
+          "references": [],
+          "startTime": 1792076455000000,
+          "duration": 153999,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/inventory/SKU-0091"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 25.8
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 13.8
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 12.0
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 15
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 30.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 61.5
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 9200
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000003",
+          "spanID": "beef00000000000a",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000003",
+              "spanID": "beef000000000009"
+            }
+          ],
+          "startTime": 1792076455006000,
+          "duration": 136000,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "inventory-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000003",
+          "spanID": "beef00000000000b",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000003",
+              "spanID": "beef00000000000a"
+            }
+          ],
+          "startTime": 1792076455017999,
+          "duration": 39000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000003",
+          "spanID": "beef00000000000c",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000003",
+              "spanID": "beef00000000000a"
+            }
+          ],
+          "startTime": 1792076455134000,
+          "duration": 19999,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 15
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 25.8
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 9200
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "LINEA_BASE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "inventory-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b5000000000000000000000000004",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000004",
+          "spanID": "beef00000000000d",
+          "operationName": "POST /jobs/bulk-download",
+          "references": [],
+          "startTime": 1792076700000000,
+          "duration": 780000000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "POST"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/jobs/bulk-download"
+            },
+            {
+              "key": "download.file.name",
+              "type": "string",
+              "value": "DATASET_ANALITICA_2026_10.tar"
+            },
+            {
+              "key": "download.file.size.bytes",
+              "type": "int64",
+              "value": 8589934592
+            },
+            {
+              "key": "download.file.size.gib",
+              "type": "float64",
+              "value": 8.0
+            },
+            {
+              "key": "network.rx.average_mbps",
+              "type": "float64",
+              "value": 88.1
+            },
+            {
+              "key": "network.rx.peak_mbps",
+              "type": "float64",
+              "value": 94.3
+            },
+            {
+              "key": "network.utilization.peak_pct",
+              "type": "float64",
+              "value": 98.2
+            },
+            {
+              "key": "network.shared_link",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792076700100000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "download.started"
+                },
+                {
+                  "key": "file.size.bytes",
+                  "type": "int64",
+                  "value": 8589934592
+                }
+              ]
+            },
+            {
+              "timestamp": 1792076820000000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "network.threshold.exceeded"
+                },
+                {
+                  "key": "network.utilization_pct",
+                  "type": "float64",
+                  "value": 91.4
+                }
+              ]
+            },
+            {
+              "timestamp": 1792077000000000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "web.services.degradation.detected"
+                },
+                {
+                  "key": "affected.services",
+                  "type": "int64",
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "timestamp": 1792077480000000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "download.completed"
+                },
+                {
+                  "key": "transferred.bytes",
+                  "type": "int64",
+                  "value": 8589934592
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000004",
+          "spanID": "beef00000000000e",
+          "operationName": "GET /exports/DATASET_ANALITICA_2026_10.tar",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000004",
+              "spanID": "beef00000000000d"
+            }
+          ],
+          "startTime": 1792076700200000,
+          "duration": 779500000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "FILES-SRV-02"
+            },
+            {
+              "key": "server.port",
+              "type": "int64",
+              "value": 443
+            },
+            {
+              "key": "network.protocol.name",
+              "type": "string",
+              "value": "https"
+            },
+            {
+              "key": "network.transferred.bytes",
+              "type": "int64",
+              "value": 8589934592
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000004",
+          "spanID": "beef00000000000f",
+          "operationName": "stream.write /data/import",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000004",
+              "spanID": "beef00000000000e"
+            }
+          ],
+          "startTime": 1792076700500000,
+          "duration": 779000000,
+          "tags": [
+            {
+              "key": "file.path",
+              "type": "string",
+              "value": "/data/import/DATASET_ANALITICA_2026_10.tar"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.rx.average_mbps",
+              "type": "float64",
+              "value": 88.1
+            },
+            {
+              "key": "disk.write.average_mbps",
+              "type": "float64",
+              "value": 11.2
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 34.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 64.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "download-agent",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "file-repository",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "FILES-SRV-02"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.40.25"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b5000000000000000000000000005",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000005",
+          "spanID": "beef000000000010",
+          "operationName": "GET /api/auth/validate",
+          "references": [],
+          "startTime": 1792076830000000,
+          "duration": 2849999,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/auth/validate"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 92.4
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 87.3
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 5.1
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 2310
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 62.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 1800
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792076830049999,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "network.congestion.detected"
+                },
+                {
+                  "key": "network.utilization_pct",
+                  "type": "float64",
+                  "value": 92.4
+                },
+                {
+                  "key": "network.queue.delay_ms",
+                  "type": "int64",
+                  "value": 2310
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000005",
+          "spanID": "beef000000000011",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000005",
+              "spanID": "beef000000000010"
+            }
+          ],
+          "startTime": 1792076830006000,
+          "duration": 2831999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "auth-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000005",
+          "spanID": "beef000000000012",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000005",
+              "spanID": "beef000000000011"
+            }
+          ],
+          "startTime": 1792076830017999,
+          "duration": 21000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000005",
+          "spanID": "beef000000000013",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000005",
+              "spanID": "beef000000000011"
+            }
+          ],
+          "startTime": 1792076830540000,
+          "duration": 2309999,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 2310
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 92.4
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 1800
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "auth-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b5000000000000000000000000006",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000006",
+          "spanID": "beef000000000014",
+          "operationName": "GET /api/orders/74235",
+          "references": [],
+          "startTime": 1792076870000000,
+          "duration": 7249999,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/orders/74235"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 504
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 96.1
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 90.4
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 5.7
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 6810
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 62.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 15200
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "GatewayTimeout"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792076870049999,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "network.congestion.detected"
+                },
+                {
+                  "key": "network.utilization_pct",
+                  "type": "float64",
+                  "value": 96.1
+                },
+                {
+                  "key": "network.queue.delay_ms",
+                  "type": "int64",
+                  "value": 6810
+                }
+              ]
+            },
+            {
+              "timestamp": 1792076877230000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "exception"
+                },
+                {
+                  "key": "exception.type",
+                  "type": "string",
+                  "value": "System.TimeoutException"
+                },
+                {
+                  "key": "exception.message",
+                  "type": "string",
+                  "value": "Tiempo de respuesta excedido por congestión del enlace compartido"
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000006",
+          "spanID": "beef000000000015",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000006",
+              "spanID": "beef000000000014"
+            }
+          ],
+          "startTime": 1792076870006000,
+          "duration": 7232000,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "orders-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000006",
+          "spanID": "beef000000000016",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000006",
+              "spanID": "beef000000000015"
+            }
+          ],
+          "startTime": 1792076870017999,
+          "duration": 48000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000006",
+          "spanID": "beef000000000017",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000006",
+              "spanID": "beef000000000015"
+            }
+          ],
+          "startTime": 1792076870440000,
+          "duration": 6809999,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 6810
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 96.1
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 15200
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "SocketWriteTimeout"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "orders-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b5000000000000000000000000007",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000007",
+          "spanID": "beef000000000018",
+          "operationName": "GET /api/inventory/SKU-0091",
+          "references": [],
+          "startTime": 1792076920000000,
+          "duration": 5480000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/inventory/SKU-0091"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 504
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 97.2
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 91.8
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 5.4
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 5030
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 62.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 9400
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "GatewayTimeout"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792076920049999,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "network.congestion.detected"
+                },
+                {
+                  "key": "network.utilization_pct",
+                  "type": "float64",
+                  "value": 97.2
+                },
+                {
+                  "key": "network.queue.delay_ms",
+                  "type": "int64",
+                  "value": 5030
+                }
+              ]
+            },
+            {
+              "timestamp": 1792076925460000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "exception"
+                },
+                {
+                  "key": "exception.type",
+                  "type": "string",
+                  "value": "System.TimeoutException"
+                },
+                {
+                  "key": "exception.message",
+                  "type": "string",
+                  "value": "Tiempo de respuesta excedido por congestión del enlace compartido"
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000007",
+          "spanID": "beef000000000019",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000007",
+              "spanID": "beef000000000018"
+            }
+          ],
+          "startTime": 1792076920006000,
+          "duration": 5461999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "inventory-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000007",
+          "spanID": "beef00000000001a",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000007",
+              "spanID": "beef000000000019"
+            }
+          ],
+          "startTime": 1792076920017999,
+          "duration": 42000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000007",
+          "spanID": "beef00000000001b",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000007",
+              "spanID": "beef000000000019"
+            }
+          ],
+          "startTime": 1792076920450000,
+          "duration": 5029999,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 5030
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 97.2
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 9400
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "SocketWriteTimeout"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "inventory-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b5000000000000000000000000008",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000008",
+          "spanID": "beef00000000001c",
+          "operationName": "GET /api/customers/3108",
+          "references": [],
+          "startTime": 1792076975000000,
+          "duration": 3860000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/customers/3108"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 94.8
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 89.5
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 5.3
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 3380
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 62.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 22700
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792076975049999,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "network.congestion.detected"
+                },
+                {
+                  "key": "network.utilization_pct",
+                  "type": "float64",
+                  "value": 94.8
+                },
+                {
+                  "key": "network.queue.delay_ms",
+                  "type": "int64",
+                  "value": 3380
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000008",
+          "spanID": "beef00000000001d",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000008",
+              "spanID": "beef00000000001c"
+            }
+          ],
+          "startTime": 1792076975006000,
+          "duration": 3841999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "customer-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000008",
+          "spanID": "beef00000000001e",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000008",
+              "spanID": "beef00000000001d"
+            }
+          ],
+          "startTime": 1792076975017999,
+          "duration": 55000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000008",
+          "spanID": "beef00000000001f",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000008",
+              "spanID": "beef00000000001d"
+            }
+          ],
+          "startTime": 1792076975480000,
+          "duration": 3380000,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 3380
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 94.8
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 22700
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "customer-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b5000000000000000000000000009",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000009",
+          "spanID": "beef000000000020",
+          "operationName": "GET /api/orders/74236",
+          "references": [],
+          "startTime": 1792077050000000,
+          "duration": 9520000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/orders/74236"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 504
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 98.2
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 92.9
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 5.3
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 8990
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 62.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 15100
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "GatewayTimeout"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792077050049999,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "network.congestion.detected"
+                },
+                {
+                  "key": "network.utilization_pct",
+                  "type": "float64",
+                  "value": 98.2
+                },
+                {
+                  "key": "network.queue.delay_ms",
+                  "type": "int64",
+                  "value": 8990
+                }
+              ]
+            },
+            {
+              "timestamp": 1792077059500000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "exception"
+                },
+                {
+                  "key": "exception.type",
+                  "type": "string",
+                  "value": "System.TimeoutException"
+                },
+                {
+                  "key": "exception.message",
+                  "type": "string",
+                  "value": "Tiempo de respuesta excedido por congestión del enlace compartido"
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000009",
+          "spanID": "beef000000000021",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000009",
+              "spanID": "beef000000000020"
+            }
+          ],
+          "startTime": 1792077050006000,
+          "duration": 9501999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "orders-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000009",
+          "spanID": "beef000000000022",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000009",
+              "spanID": "beef000000000021"
+            }
+          ],
+          "startTime": 1792077050017999,
+          "duration": 44000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000009",
+          "spanID": "beef000000000023",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000009",
+              "spanID": "beef000000000021"
+            }
+          ],
+          "startTime": 1792077050529999,
+          "duration": 8990000,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 8990
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 98.2
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 15100
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "SocketWriteTimeout"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "orders-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b500000000000000000000000000a",
+      "spans": [
+        {
+          "traceID": "a10b500000000000000000000000000a",
+          "spanID": "beef000000000024",
+          "operationName": "GET /api/auth/validate",
+          "references": [],
+          "startTime": 1792077120000000,
+          "duration": 4920000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/auth/validate"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 504
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 96.7
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 91.2
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 5.5
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 4480
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 62.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 1800
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "GatewayTimeout"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792077120049999,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "network.congestion.detected"
+                },
+                {
+                  "key": "network.utilization_pct",
+                  "type": "float64",
+                  "value": 96.7
+                },
+                {
+                  "key": "network.queue.delay_ms",
+                  "type": "int64",
+                  "value": 4480
+                }
+              ]
+            },
+            {
+              "timestamp": 1792077124900000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "exception"
+                },
+                {
+                  "key": "exception.type",
+                  "type": "string",
+                  "value": "System.TimeoutException"
+                },
+                {
+                  "key": "exception.message",
+                  "type": "string",
+                  "value": "Tiempo de respuesta excedido por congestión del enlace compartido"
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000a",
+          "spanID": "beef000000000025",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000a",
+              "spanID": "beef000000000024"
+            }
+          ],
+          "startTime": 1792077120006000,
+          "duration": 4901999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "auth-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000a",
+          "spanID": "beef000000000026",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000a",
+              "spanID": "beef000000000025"
+            }
+          ],
+          "startTime": 1792077120017999,
+          "duration": 24000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000a",
+          "spanID": "beef000000000027",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000a",
+              "spanID": "beef000000000025"
+            }
+          ],
+          "startTime": 1792077120440000,
+          "duration": 4480000,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 4480
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 96.7
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 1800
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "SocketWriteTimeout"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "auth-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b500000000000000000000000000b",
+      "spans": [
+        {
+          "traceID": "a10b500000000000000000000000000b",
+          "spanID": "beef000000000028",
+          "operationName": "GET /api/inventory/SKU-1277",
+          "references": [],
+          "startTime": 1792077220000000,
+          "duration": 4150000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/inventory/SKU-1277"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 95.3
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 89.9
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 5.4
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 3670
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 62.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 9700
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792077220049999,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "network.congestion.detected"
+                },
+                {
+                  "key": "network.utilization_pct",
+                  "type": "float64",
+                  "value": 95.3
+                },
+                {
+                  "key": "network.queue.delay_ms",
+                  "type": "int64",
+                  "value": 3670
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000b",
+          "spanID": "beef000000000029",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000b",
+              "spanID": "beef000000000028"
+            }
+          ],
+          "startTime": 1792077220006000,
+          "duration": 4131999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "inventory-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000b",
+          "spanID": "beef00000000002a",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000b",
+              "spanID": "beef000000000029"
+            }
+          ],
+          "startTime": 1792077220017999,
+          "duration": 37000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000b",
+          "spanID": "beef00000000002b",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000b",
+              "spanID": "beef000000000029"
+            }
+          ],
+          "startTime": 1792077220480000,
+          "duration": 3670000,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 3670
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 95.3
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 9700
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "inventory-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b500000000000000000000000000c",
+      "spans": [
+        {
+          "traceID": "a10b500000000000000000000000000c",
+          "spanID": "beef00000000002c",
+          "operationName": "GET /api/customers/3110",
+          "references": [],
+          "startTime": 1792077330000000,
+          "duration": 6169999,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/customers/3110"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 504
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 97.5
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 92.0
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 5.5
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 5680
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 62.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 22400
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "GatewayTimeout"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [
+            {
+              "timestamp": 1792077330049999,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "network.congestion.detected"
+                },
+                {
+                  "key": "network.utilization_pct",
+                  "type": "float64",
+                  "value": 97.5
+                },
+                {
+                  "key": "network.queue.delay_ms",
+                  "type": "int64",
+                  "value": 5680
+                }
+              ]
+            },
+            {
+              "timestamp": 1792077336150000,
+              "fields": [
+                {
+                  "key": "event",
+                  "type": "string",
+                  "value": "exception"
+                },
+                {
+                  "key": "exception.type",
+                  "type": "string",
+                  "value": "System.TimeoutException"
+                },
+                {
+                  "key": "exception.message",
+                  "type": "string",
+                  "value": "Tiempo de respuesta excedido por congestión del enlace compartido"
+                }
+              ]
+            }
+          ],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000c",
+          "spanID": "beef00000000002d",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000c",
+              "spanID": "beef00000000002c"
+            }
+          ],
+          "startTime": 1792077330006000,
+          "duration": 6152000,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "customer-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000c",
+          "spanID": "beef00000000002e",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000c",
+              "spanID": "beef00000000002d"
+            }
+          ],
+          "startTime": 1792077330017999,
+          "duration": 51000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000c",
+          "spanID": "beef00000000002f",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000c",
+              "spanID": "beef00000000002d"
+            }
+          ],
+          "startTime": 1792077330489999,
+          "duration": 5680000,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 5680
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 97.5
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 22400
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "SocketWriteTimeout"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "INCIDENTE"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            },
+            {
+              "key": "error",
+              "type": "bool",
+              "value": true
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "customer-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b500000000000000000000000000d",
+      "spans": [
+        {
+          "traceID": "a10b500000000000000000000000000d",
+          "spanID": "beef000000000030",
+          "operationName": "GET /api/auth/validate",
+          "references": [],
+          "startTime": 1792077510000000,
+          "duration": 118000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/auth/validate"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 31.2
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 16.3
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 14.9
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 18
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 30.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 61.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 1800
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000d",
+          "spanID": "beef000000000031",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000d",
+              "spanID": "beef000000000030"
+            }
+          ],
+          "startTime": 1792077510006000,
+          "duration": 99999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "auth-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000d",
+          "spanID": "beef000000000032",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000d",
+              "spanID": "beef000000000031"
+            }
+          ],
+          "startTime": 1792077510017999,
+          "duration": 19000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000d",
+          "spanID": "beef000000000033",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000d",
+              "spanID": "beef000000000031"
+            }
+          ],
+          "startTime": 1792077510097999,
+          "duration": 20000,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 18
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 31.2
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 1800
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "auth-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b500000000000000000000000000e",
+      "spans": [
+        {
+          "traceID": "a10b500000000000000000000000000e",
+          "spanID": "beef000000000034",
+          "operationName": "GET /api/orders/74250",
+          "references": [],
+          "startTime": 1792077530000000,
+          "duration": 224000,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/orders/74250"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 34.0
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 17.5
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 16.5
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 26
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.5
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 61.8
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 14900
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000e",
+          "spanID": "beef000000000035",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000e",
+              "spanID": "beef000000000034"
+            }
+          ],
+          "startTime": 1792077530006000,
+          "duration": 205999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "orders-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000e",
+          "spanID": "beef000000000036",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000e",
+              "spanID": "beef000000000035"
+            }
+          ],
+          "startTime": 1792077530017999,
+          "duration": 49000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000e",
+          "spanID": "beef000000000037",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000e",
+              "spanID": "beef000000000035"
+            }
+          ],
+          "startTime": 1792077530198000,
+          "duration": 25999,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 26
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 34.0
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 14900
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "orders-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b500000000000000000000000000f",
+      "spans": [
+        {
+          "traceID": "a10b500000000000000000000000000f",
+          "spanID": "beef000000000038",
+          "operationName": "GET /api/inventory/SKU-0091",
+          "references": [],
+          "startTime": 1792077550000000,
+          "duration": 180999,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/inventory/SKU-0091"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 32.5
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 16.8
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 15.7
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 22
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 30.4
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 61.2
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 9300
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000f",
+          "spanID": "beef000000000039",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000f",
+              "spanID": "beef000000000038"
+            }
+          ],
+          "startTime": 1792077550006000,
+          "duration": 162999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "inventory-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000f",
+          "spanID": "beef00000000003a",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000f",
+              "spanID": "beef000000000039"
+            }
+          ],
+          "startTime": 1792077550017999,
+          "duration": 41000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b500000000000000000000000000f",
+          "spanID": "beef00000000003b",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b500000000000000000000000000f",
+              "spanID": "beef000000000039"
+            }
+          ],
+          "startTime": 1792077550159000,
+          "duration": 21999,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 22
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 32.5
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 9300
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "inventory-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    },
+    {
+      "traceID": "a10b5000000000000000000000000010",
+      "spans": [
+        {
+          "traceID": "a10b5000000000000000000000000010",
+          "spanID": "beef00000000003c",
+          "operationName": "GET /api/customers/3112",
+          "references": [],
+          "startTime": 1792077570000000,
+          "duration": 204999,
+          "tags": [
+            {
+              "key": "http.request.method",
+              "type": "string",
+              "value": "GET"
+            },
+            {
+              "key": "http.route",
+              "type": "string",
+              "value": "/api/customers/3112"
+            },
+            {
+              "key": "http.response.status_code",
+              "type": "int64",
+              "value": 200
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "api.corporativa.local"
+            },
+            {
+              "key": "network.protocol.version",
+              "type": "string",
+              "value": "1.1"
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 33.1
+            },
+            {
+              "key": "network.rx_mbps",
+              "type": "float64",
+              "value": 17.0
+            },
+            {
+              "key": "network.tx_mbps",
+              "type": "float64",
+              "value": 16.1
+            },
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 24
+            },
+            {
+              "key": "host.cpu.utilization_pct",
+              "type": "float64",
+              "value": 31.0
+            },
+            {
+              "key": "host.memory.utilization_pct",
+              "type": "float64",
+              "value": 62.0
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 22100
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "2"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000010",
+          "spanID": "beef00000000003d",
+          "operationName": "Controller.Execute",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000010",
+              "spanID": "beef00000000003c"
+            }
+          ],
+          "startTime": 1792077570006000,
+          "duration": 186999,
+          "tags": [
+            {
+              "key": "code.namespace",
+              "type": "string",
+              "value": "customer-api.Controllers"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000010",
+          "spanID": "beef00000000003e",
+          "operationName": "SELECT application_data",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000010",
+              "spanID": "beef00000000003d"
+            }
+          ],
+          "startTime": 1792077570017999,
+          "duration": 52000,
+          "tags": [
+            {
+              "key": "db.system",
+              "type": "string",
+              "value": "mssql"
+            },
+            {
+              "key": "db.namespace",
+              "type": "string",
+              "value": "CorporateDB"
+            },
+            {
+              "key": "server.address",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "db.rows_returned",
+              "type": "int64",
+              "value": 25
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "3"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p2",
+          "warnings": null
+        },
+        {
+          "traceID": "a10b5000000000000000000000000010",
+          "spanID": "beef00000000003f",
+          "operationName": "HTTP response.write",
+          "references": [
+            {
+              "refType": "CHILD_OF",
+              "traceID": "a10b5000000000000000000000000010",
+              "spanID": "beef00000000003d"
+            }
+          ],
+          "startTime": 1792077570180999,
+          "duration": 24000,
+          "tags": [
+            {
+              "key": "network.queue.delay_ms",
+              "type": "int64",
+              "value": 24
+            },
+            {
+              "key": "network.utilization_pct",
+              "type": "float64",
+              "value": 33.1
+            },
+            {
+              "key": "response.size.bytes",
+              "type": "int64",
+              "value": 22100
+            },
+            {
+              "key": "error.type",
+              "type": "string",
+              "value": "none"
+            },
+            {
+              "key": "incident.phase",
+              "type": "string",
+              "value": "RECUPERACION"
+            },
+            {
+              "key": "span.kind",
+              "type": "string",
+              "value": "1"
+            },
+            {
+              "key": "otel.scope.name",
+              "type": "string",
+              "value": "segtium.synthetic.network-lab"
+            },
+            {
+              "key": "otel.scope.version",
+              "type": "string",
+              "value": "1.0.0"
+            }
+          ],
+          "logs": [],
+          "processID": "p1",
+          "warnings": null
+        }
+      ],
+      "processes": {
+        "p1": {
+          "serviceName": "customer-api",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "APP-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.15"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        },
+        "p2": {
+          "serviceName": "sql-database",
+          "tags": [
+            {
+              "key": "deployment.environment",
+              "type": "string",
+              "value": "laboratorio"
+            },
+            {
+              "key": "host.name",
+              "type": "string",
+              "value": "DB-SRV-01"
+            },
+            {
+              "key": "host.ip",
+              "type": "string",
+              "value": "10.20.30.20"
+            },
+            {
+              "key": "network.interface.name",
+              "type": "string",
+              "value": "Ethernet0"
+            },
+            {
+              "key": "network.link.capacity_mbps",
+              "type": "int64",
+              "value": 100
+            },
+            {
+              "key": "scenario.name",
+              "type": "string",
+              "value": "descarga-masiva-afecta-web-services"
+            },
+            {
+              "key": "service.version",
+              "type": "string",
+              "value": "1.4.0-lab"
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "type": "string",
+              "value": "opentelemetry"
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "type": "string",
+              "value": "python"
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "type": "string",
+              "value": "1.39.0"
+            }
+          ]
+        }
+      },
+      "warnings": null
+    }
+  ],
+  "total": 16,
+  "limit": 0,
+  "offset": 0,
+  "errors": null
+}
